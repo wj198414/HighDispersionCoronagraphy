@@ -1,5 +1,5 @@
-# HDC
-This is simulation code for high dispersion coronagraphy (HDC)
+## HDC
+#This is simulation code for high dispersion coronagraphy (HDC)
 
 The methodology is described in the following two papers:
 
@@ -7,7 +7,7 @@ The methodology is described in the following two papers:
 
 2, *Effects of thermal and exozodiacal background on space telescope observations of exoEarths*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract) 
 
-In summary, the code simulates the obeservation and data reduction process using HDC. The observation part considers photons from the star and planet, zodiac light in the system, sky transmission and emission, and the telescope thermal background. The data reduction part includes procedures of removing all contamination but the planet light at the photon-noise limit. The planet is then detected via the cross correlation technique by cross correlating the noisy observed planet spectrum with a template spectrum that considers molecules of interest (e.g., biosignatures).   
+**In summary**, the code simulates the obeservation and data reduction process using HDC. The observation part considers photons from the star and planet, zodiac light in the system, sky transmission and emission, and the telescope thermal background. The data reduction part includes procedures of removing all contamination but the planet light at the photon-noise limit. The planet is then detected via the cross correlation technique by cross correlating the noisy observed planet spectrum with a template spectrum that considers molecules of interest (e.g., biosignatures).   
 
 The input file is:
 
