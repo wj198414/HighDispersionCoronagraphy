@@ -3,9 +3,9 @@
 
 The methodology is described in the following two papers:
 
-1, *Observing Exoplanets with High Dispersion Coronagraphy. I. The Scientific Potential of Current and Next-generation Large Ground and Space Telescopes*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2017AJ....153..183W/abstract)
+1, [*Observing Exoplanets with High Dispersion Coronagraphy. I. The Scientific Potential of Current and Next-generation Large Ground and Space Telescopes*](https://ui.adsabs.harvard.edu/abs/2017AJ....153..183W/abstract)
 
-2, *Effects of thermal and exozodiacal background on space telescope observations of exoEarths*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract) 
+2, [*Effects of thermal and exozodiacal background on space telescope observations of exoEarths*](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract) 
 
 **In summary**, the code simulates the obeservation and data reduction process using HDC. The observation part considers photons from the star and planet, zodiac light in the system, sky transmission and emission, and the telescope thermal background. The data reduction part includes procedures of removing all contamination but the planet light at the photon-noise limit. The planet is then detected via the cross correlation technique by cross correlating the noisy observed planet spectrum with a template spectrum that considers molecules of interest (e.g., biosignatures).   
 
