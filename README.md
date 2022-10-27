@@ -1,6 +1,12 @@
 # HDC
 This is simulation code for high dispersion coronagraphy
 
+The methodology is described in the following two papers:
+1, *Observing Exoplanets with High Dispersion Coronagraphy. I. The Scientific Potential of Current and Next-generation Large Ground and Space Telescopes*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2017AJ....153..183W/abstract)
+2, *Effects of thermal and exozodiacal background on space telescope observations of exoEarths*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract) 
+
+In summary, 
+
 The input file is:
 
 *ROS128b_J.init*
@@ -11,7 +17,10 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 3, template_path_thermal is the fits file that stores the template spectrum in cross correlation. You can also use, e.g, HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits
 4, all fits file should follow the PHENOEX spectrum format. That is, for any new fits file used by the code, it has to use the PHENOEX spectrum spectrum (e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits) as a template and replace the wavelength and flux information within.
 
-There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://jiwang.io):
+There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/wang_12220_osu_edu/EtUnbK-4Yz9KsEWCiEQpc7AB0SAyeUMzVbhk6nJERq2-aw?e=ZAbohR):
+
+After downloading the folder, make sure you set up corretly the path in the .init file, e.g.,:
+```zodi_spec_path:         ../modern_cube_zodi_dir                 #Exozodi simulation fits file```
 
 After set up. you can run:
 ```python  hci_hrs_sim.py```
