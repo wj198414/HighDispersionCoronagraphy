@@ -3,7 +3,7 @@ This is simulation code for high dispersion coronagraphy
 
 The input file is:
 
-ROS128b_J.init
+*ROS128b_J.init*
 
 This is the file in which you set up parameters in HDC simulations. Many fields are self explanatory.
 1, For young self luminous planets, we use template_type "thermal".
@@ -11,10 +11,10 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 3, template_path_thermal is the fits file that stores the template spectrum in cross correlation. You can also use, e.g, HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits
 4, all fits file should follow the PHENOEX spectrum format. That is, for any new fits file used by the code, it has to use the PHENOEX spectrum spectrum (e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits) as a template and replace the wavelength and flux information within.
 
-There are large files that I cannot upload to Github, i.e., a folder named modern_cube_zodi_dir, the path of which can be set up in the .init file. The folder can be can be downloaded here:
+There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://jiwang.io):
 
 After set up. you can run:
-python  hci_hrs_sim.py
+```python  hci_hrs_sim.py```
 
 The you will get a few plots:
 1, simulated spectra, the information is also store in txt files
