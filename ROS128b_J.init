@@ -1,0 +1,37 @@
+wav_min: 		1.1				# in um
+wav_max: 		1.3	 			# in um
+t_exp: 			18e4					# in second
+obj_tag: 		ROS128b_J_H2O			# appear in saved pkl file
+st_spec_path: 		template.star.fits			# spec fits file for star
+st_template_spec_path:	lte035-4.5-0.0a+0.0.BT-Settl.fits	# template spec fits file to generate star fits file
+st_inclination_deg: 	60.0					# in degree
+st_rotation_vel: 	2.7e3					# in m/s
+st_radial_vel: 		0e3					# in m/s positive is blue shift
+pl_spec_path: 		template.planet.fits			# spec fits file for planet 
+pl_template_spec_path:	GeometricA_Earth_LowCloud_UltraRes1.dat	# template spec fits file to generate planet fits file
+pl_inclination_deg: 	60.0					# in degree
+pl_rotation_vel: 	5e2					# in m/s
+pl_radial_vel: 		20.4e3					# in m/s positive is blue shift
+pl_st_distance:		7.5e9					# in m 1 AU = 1.496e11 m
+pl_radius:		9e6				# in m 1 Earth Radius = 6378000.0 m
+pl_illumination:	0.3					# fraction of illumination for a planet
+zodi_spec_path:		../modern_cube_zodi_dir			#Exozodi simulation fits file
+spec_reso: 		1024e2				# spectral resolution
+distance: 		3.5					# in pc
+spec_tran_path: 	Earth_atm_trans_NSO_GEMINI_N.txt	# atmosphere transmission file path
+spec_radi_path: 	mk_skybg_zmnq_16_15_ph.dat		# atmosphere emission file path
+telescope_size: 	10.0					# in m
+num_surfaces:		10  			# number of warm optical surfaces in the telescope
+temperature:		100				# temperature of the telescope in K
+exozodi_level:		1.0				# level of exozodi relative to the Solar System
+pl_st_contrast: 	1e-5			# star light suppression at fiber position
+read_noise: 		0.0					# in electron / pixel per read
+dark_current: 		0.0					# in elsctron / s / pixel
+fiber_size: 		1.0					# in lambda / D fiber sky projection 
+pixel_sampling: 	3.0					# pixels per resolution element
+throughput: 		0.01					# end to end throughput
+wfc_residual: 		5.0					# in nm
+template_path_thermal:  lte012-3.5-0.0a+0.0.BT-Settl.fits       # thermal template spec fits file to generate planet fits file
+template_path: 		template.H2O.fits			# spec fits file for template
+template_tag: 		H2O				# appear in saved pkl file
+template_type:		reflection				# reflection or thermal

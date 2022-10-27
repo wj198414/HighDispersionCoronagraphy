@@ -1,0 +1,131 @@
+hci_hrs_sim.py changelog
+
+11/16/17
+
+Ji Wang
+
+-obs_norm is now normalized to 1
+
+-change high pass filter value to be < 100
+
+11/14/17:
+
+Ji Wang
+
+-add calcSNRrmsNoiseless in crosscorrelationfunction.py
+	-to calculate CCF SNR with specified peak with ccf.noiseless
+	subtracted. 
+
+10/27/17:
+
+Carl Coker
+
+-Fixed bug Ji pointed out in removeSkyTransmissionStar()
+    -Planet-star contrast was double-counted in subtraction
+    -This change will eventually be overwritten by Ji's fix
+
+10/26/17:
+
+Carl Coker
+
+-Changed exozodi PSF aperture to circular
+	-This results in a large speed penalty when using the entire wavelength range
+	-Need to either split out this step or make sure to use only the relevant cubes
+		for each spectral line we want to simulate
+	-Doing this for the full range also uses an enormous amount of virtual memory -
+		need at least 32 GB of RAM to do it!
+
+10/25/17:
+
+Carl Coker
+
+-Fixed up some comments
+-All spectral chunks in HCI_HRS_Observation are now evenly sampled
+
+10/24/17:
+
+Carl Coker
+
+-Distance units in ZodiTarget now correct, fixing calculation of N_pix
+-Added code to automatically iterate over all Haystacks cubes present
+    -Fixing some sampling issues now
+
+10/18/17:
+
+Carl Coker
+
+-Fixed bug in distance scaling of exozodi
+
+10/17/17:
+
+Carl Coker
+
+-Changed plt.show() calls to plt.show(block=False)
+
+10/16/17:
+
+Carl Coker (ccoker67@gmail.com, carl.t.coker@jpl.nasa.gov)
+
+-Exozodi background fully implemented in space branch using Haystacks
+	-Additional cubes need to be downloaded in order to vary inclination
+		and get larger wavelength range for additional spectral lines
+-Noise model revamped
+	-f_obs = f_st*C + f_pl + f_th + f_zo
+	-f_red = f_obs - f_st*C
+	-Noise added in quadrature; thermal and exozodi background left in
+		as subtracting them just adds noise without doing anything
+		for the CCF.
+-Spectra now converted to photon units much earlier in process
+	-Units of all spectra now consistent early on; adding them together
+		is now seamless
+-Some code cleaned up
+-obs_norm assignment changed for now; f_red is now normalized to its median,
+	with no adjustment to stellar flux level
+-Changes finally committed to Github
+-Why is PHXREFF used to scale both the star and the planet flux, since it's
+	the effective radius of a star from the PHOENIX stellar atmosphere
+	model?
+
+10/12/17:
+
+Carl Coker (coker67@gmail.com, carl.t.coker@jpl.nasa.gov)
+
+-Added exozodi background code
+	-Using the 60 degree inclination model for now
+	-Wavelength range is slightly off, but should be okay for now
+	-I think the units problem with the spectra is real; need to convert all the spectra 
+		to the same units before adding them together.  Signal right now doesn't degrade
+		until you hit like 1,000 zodi (!?!).
+-Removed dummy removeSkyTransmissionStar
+-Every class is now in its own module file.
+	-Good Christ, scrolling back and forth over the entire length of the code was annoying.
+
+10/11/17:
+
+Carl Coker (ccoker67@gmail.com, carl.t.coker@jpl.nasa.gov)
+
+-Heavily modified reduced spectrum noise calculation.
+-Encountered odd bug where one pixel has GIGANTIC noise value as temp increases.
+	-Changed noise model again, to use f = f_obs / (f_star*C + f_therm)
+	-Change fixed pathological noise properties, but may not be actually correct
+
+9/28/17:
+
+Carl Coker (ccoker67@gmail.com, carl.t.coker@jpl.nasa.gov)
+
+-Changed construction of observed spectrum in HCI_HRS_Observation.execute() to match units
+	-Old code block commented out, still present.
+-Each unrelated plot now generates its own figure
+-Changed HCI_HRS_Reduction.removeSkyTransmissionStar() to a dummy function until I know what's actually going on
+
+9/27/17:
+
+Carl Coker (ccoker67@gmail.com, carl.t.coker@jpl.nasa.gov)
+
+-Added thermal background code to simulations
+	-added class ThermTarget
+	-added method calcThermBackground to class Instrument
+	-added method getTotalThermFlux to class HCI_HRS_Observation
+	-added thermal background spectrum to the observation logic in same way as planet and stellar spectra
+	-CCF plots now generate new figure instead of drawing on previous ones
+	-Corrected flux units in HCI_HRS_observation.getTotalFlux
