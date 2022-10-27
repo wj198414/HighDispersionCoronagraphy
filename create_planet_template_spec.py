@@ -312,7 +312,7 @@ def __main__():
         pl_illumination = np.float32(initDict["pl_illumination"])
         hci_hrs_name = "{0:06.3f}_{1:06.3}".format(wav_min, wav_max)
         obj_tag = initDict["obj_tag"]
-        fits_dir = "../fits_dir/"
+        fits_dir = "./fits_dir/"
         hdu = pyfits.open(initDict["st_template_spec_path"])
         hdu[1].data["Wavelength"][0:-1] = np.nan
         hdu[1].data["Flux"][0:-1] = np.nan
