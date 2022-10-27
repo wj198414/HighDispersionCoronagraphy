@@ -2,7 +2,9 @@
 This is simulation code for high dispersion coronagraphy
 
 The methodology is described in the following two papers:
+
 1, *Observing Exoplanets with High Dispersion Coronagraphy. I. The Scientific Potential of Current and Next-generation Large Ground and Space Telescopes*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2017AJ....153..183W/abstract)
+
 2, *Effects of thermal and exozodiacal background on space telescope observations of exoEarths*, [link to the paper](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract) 
 
 In summary, 
