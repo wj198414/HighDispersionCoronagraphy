@@ -1,5 +1,5 @@
-## HDC
-#This is simulation code for high dispersion coronagraphy (HDC)
+# HDC
+## This is simulation code for high dispersion coronagraphy (HDC)
 
 The methodology is described in the following two papers:
 
