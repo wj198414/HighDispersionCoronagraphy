@@ -70,7 +70,31 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 
 - pl_st_distance is the planet-star separation, pl_radius is the planet radius, pl_illumination is the planet albedo. 
 
-- zodi_spec_path is ...
+- zodi_spec_path is the folder store precalculated exozodi flux level and spectral features. See below for downloading instructions. More details of exozodi calculation can be found in [Coker et al. 2018](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract).
+
+- spec_reso is the resolving power of the spectrograph, distance is the distance between the host star and Earth.
+
+- spec_tran_path is the file path for the Earth transmission spectrum; spec_radi_path is the file path for the atmosphere emission spectrum. 
+
+- telescope_size is the aperture diameter. num_surfaces is the number of optics surface and temperature is the instrument temperature for the thermal emission calculation. More details can be found in [Coker et al. 2018](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract).
+
+- exozodi_level is the exozodi level in the unit of one Earth zodi. 
+
+- pl_st_contrast is the raw starlight suppression level of the coronagraph
+
+- read_noise is the readout noise of the detector. dark_current is the dark current. 
+
+- fiber_size is the fiber angular extent on sky. pixel_sampling is the number of pixels that samples one resolution element. 
+
+- throughput is the system end-to-end throughput. wfc_residual is the wavefront correction residual of the adaptive optics system. 
+
+- template_path_thermal is the file path of the planet thermal spectrum
+
+- template_path is the generated template spectrum that is used in cross-correlation 
+
+- template_tag is the species to be detected
+
+- template_type determines if the planet spectrum is reflection or thermal. In the case of reflection, st_template_spec_path is used; in the case of thermal, template_path_thermal is used to generate planet spectrum. 
 
 1, For young self luminous planets, we use template_type "thermal".
 2, pl_template_spec_path is the fits file that are used to generate observed spectrum.
