@@ -104,7 +104,9 @@ For young self luminous planets, please choose template_type "thermal". For the 
 For future space missions in search of reflection light from rocky planets, please choose template_type "reflection".  
 
 **To run the code**:
+
 ```python  create_planet_template_spec.py # if new templates needed to be generated```
+
 ```python  hci_hrs_sim.py```
 
 The you will get a few plots:
