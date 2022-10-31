@@ -73,6 +73,7 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 - zodi_spec_path is the folder store precalculated exozodi flux level and spectral features. See below for downloading instructions. More details of exozodi calculation can be found in [Coker et al. 2018](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract). There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/wang_12220_osu_edu/EtUnbK-4Yz9KsEWCiEQpc7AB0SAyeUMzVbhk6nJERq2-aw?e=ZAbohR):
 
 After downloading the folder, make sure you set up corretly the path in the .init file, e.g.,:
+
 ```zodi_spec_path:         ../modern_cube_zodi_dir                 #Exozodi simulation fits file```
 
 - spec_reso is the resolving power of the spectrograph, distance is the distance between the host star and Earth.
@@ -148,7 +149,7 @@ The above texts include the total number of photons from the star, planet, sky, 
 The information of each simulation is also stored in a log file:  multi_sim_log.dat. One example line is as follows:
 
 ```
-HR8799e_all                                       ,1.50e+04,3.00e-04, 0.280,2.89e+00,6.98e-01,3.36e+00,8.98e-01
+HR8799e_all,1.50e+04,3.00e-04, 0.280,2.89e+00,6.98e-01,3.36e+00,8.98e-01
 ```
 Each coloum is separated by coma and has the following meaning: 
 - 1st column: prefix
