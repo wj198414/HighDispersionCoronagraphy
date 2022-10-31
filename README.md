@@ -96,6 +96,8 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 
 - template_type determines if the planet spectrum is reflection or thermal. In the case of reflection, st_template_spec_path is used; in the case of thermal, template_path_thermal is used to generate planet spectrum. 
 
+For young self luminous planets, please choose template_type "thermal". For the spectrum that includes all species, one would directly use phoenix spectrum, e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits; for a spectrum that includes only one molecular species, one can use, e.g., HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits. These fits files are included in the repository.  
+
 1, For young self luminous planets, we use template_type "thermal".
 2, pl_template_spec_path is the fits file that are used to generate observed spectrum.
 3, template_path_thermal is the fits file that stores the template spectrum in cross correlation. You can also use, e.g, HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits
