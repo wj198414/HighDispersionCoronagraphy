@@ -103,13 +103,8 @@ For young self luminous planets, please choose template_type "thermal". For the 
 
 For future space missions in search of reflection light from rocky planets, please choose template_type "reflection".  
 
-
-There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/wang_12220_osu_edu/EtUnbK-4Yz9KsEWCiEQpc7AB0SAyeUMzVbhk6nJERq2-aw?e=ZAbohR):
-
-After downloading the folder, make sure you set up corretly the path in the .init file, e.g.,:
-```zodi_spec_path:         ../modern_cube_zodi_dir                 #Exozodi simulation fits file```
-
-After set up. you can run:
+**To run the code**:
+```python  create_planet_template_spec.py # if new templates needed to be generated```
 ```python  hci_hrs_sim.py```
 
 The you will get a few plots:
