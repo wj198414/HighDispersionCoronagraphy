@@ -123,8 +123,9 @@ For future space missions in search of reflection light from rocky planets, plea
 
 3. cross correlation function between the noisy spectrum and template spectrum. 
 
-The code also spits out the following information:
+An example of the text output is given as follows:
 
+```
 ('number of read = ', 156.59999999999999, 23.0, 0.80000001, 60.0, <Quantity 3394.656182351968>)
 ('number of read = ', 156.59999999999999, 23.0, 0.80000001, 60.0, 1.2614329685458237)
 ('number of read = ', 156.59999999999999, 23.0, 0.80000001, 60.0, <Quantity 10343452.93187425>)
@@ -140,18 +141,21 @@ hci_hrs_sim.py:707: RuntimeWarning: invalid value encountered in less
 hci_hrs_sim.py:707: RuntimeWarning: invalid value encountered in greater
   idx = ((wav < self.hci_hrs_obs.wav_max) & (wav > self.hci_hrs_obs.wav_min))
 {'SNR_vs_NoiseLess': 2.9887322615269971, 'CCF': <__main__.CrossCorrelationFunction instance at 0x7fb615d17998>, 'Center': -21419.065834811099, 'SNR_RMS': 2.618892293464381}
+```
 
-The above texts include total number of photons from the star, planet, sky, leaded star light in the considered wavelength range. The number of pixels can be calculated by Planet flux
-/ Planet flux per pixel. You can use these number for back of envelope order of magnitude calculation.
+The above texts include the total number of photons from the star, planet, sky, leaked star light in the considered wavelength range. The number of pixels can be calculated by Planet flux / Planet flux per pixel. You can use these numbers for back of envelope order of magnitude calculation.
 
-Another output file is multi_sim_log.dat
-which contains info like this:
+The information of each simulation is also stored in a log file:  multi_sim_log.dat. One example line is as follows:
+
+```
 HR8799e_all                                       ,1.50e+04,3.00e-04, 0.280,2.89e+00,6.98e-01,3.36e+00,8.98e-01
-1st column: case name
-2nd column: spectral resolution
-3rd column: the fraction of detections of 100 simulations
-4th column: median value of detection significance
-5th column: std of detection significance
-6th column: median value of detection significance in photon noise limited case
-7th column: std of detection significance in photon noise limited case
+```
+Each coloum is separated by coma and has the following meaning: 
+- 1st column: prefix
+- 2nd column: spectral resolution
+- 3rd column: the fraction of detections of 100 simulations
+- 4th column: median value of detection significance
+- 5th column: std of detection significance
+- 6th column: median value of detection significance in photon noise limited case
+- 7th column: std of detection significance in photon noise limited case
 
