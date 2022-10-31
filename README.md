@@ -70,7 +70,10 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 
 - pl_st_distance is the planet-star separation, pl_radius is the planet radius, pl_illumination is the planet albedo. 
 
-- zodi_spec_path is the folder store precalculated exozodi flux level and spectral features. See below for downloading instructions. More details of exozodi calculation can be found in [Coker et al. 2018](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract).
+- zodi_spec_path is the folder store precalculated exozodi flux level and spectral features. See below for downloading instructions. More details of exozodi calculation can be found in [Coker et al. 2018](https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..5GC/abstract). There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/wang_12220_osu_edu/EtUnbK-4Yz9KsEWCiEQpc7AB0SAyeUMzVbhk6nJERq2-aw?e=ZAbohR):
+
+After downloading the folder, make sure you set up corretly the path in the .init file, e.g.,:
+```zodi_spec_path:         ../modern_cube_zodi_dir                 #Exozodi simulation fits file```
 
 - spec_reso is the resolving power of the spectrograph, distance is the distance between the host star and Earth.
 
@@ -96,12 +99,10 @@ This is the file in which you set up parameters in HDC simulations. Many fields 
 
 - template_type determines if the planet spectrum is reflection or thermal. In the case of reflection, st_template_spec_path is used; in the case of thermal, template_path_thermal is used to generate planet spectrum. 
 
-For young self luminous planets, please choose template_type "thermal". For the spectrum that includes all species, one would directly use phoenix spectrum, e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits; for a spectrum that includes only one molecular species, one can use, e.g., HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits. These fits files are included in the repository.  
+For young self luminous planets, please choose template_type "thermal". For the spectrum that includes all species, one would directly use phoenix spectrum, e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits; for a spectrum that includes only one molecular species, one can use, e.g., HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits. We use the prefix HR8799 because the system is the architype of directly-imaged exoplanets and the template spectra are generated based on properties of HR 8799 c. These fits files are included in the repository.  
 
-1, For young self luminous planets, we use template_type "thermal".
-2, pl_template_spec_path is the fits file that are used to generate observed spectrum.
-3, template_path_thermal is the fits file that stores the template spectrum in cross correlation. You can also use, e.g, HR8799_H2O.fits, or HR8799_CO.fits or HR8799_CH4.fits
-4, all fits file should follow the PHENOEX spectrum format. That is, for any new fits file used by the code, it has to use the PHENOEX spectrum spectrum (e.g., lte012-3.5-0.0a+0.0.BT-Settl.fits) as a template and replace the wavelength and flux information within.
+For future space missions in search of reflection light from rocky planets, please choose template_type "reflection".  
+
 
 There are large files that I cannot upload to Github, i.e., a folder named *modern_cube_zodi_dir*, the path of which can be set up in the .init file. The folder can be can be downloaded [here](https://buckeyemailosu-my.sharepoint.com/:f:/g/personal/wang_12220_osu_edu/EtUnbK-4Yz9KsEWCiEQpc7AB0SAyeUMzVbhk6nJERq2-aw?e=ZAbohR):
 
