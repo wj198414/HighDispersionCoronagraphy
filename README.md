@@ -109,16 +109,19 @@ For future space missions in search of reflection light from rocky planets, plea
 
 ```python  hci_hrs_sim.py```
 
-The you will get a few plots:
-1, simulated spectra, the information is also store in txt files
-e.g.,
-atm.txt - telluric transmission
-rad.txt - sky emission
-pl.txt - planet spectrum
-st.txt - stellar spectrum
-pl_st.txt - observed spectrum without noise
-2, noisy spectrum and template spectrum
-3, cross correlation function
+**The outputs** include a few figures:
+1. simulated spectra, the information is also store in txt files, e.g.,
+- atm.txt - telluric transmission
+- rad.txt - sky emission
+- pl.txt - planet spectrum
+- st.txt - stellar spectrum
+- pl_st.txt - observed spectrum without noise
+
+2. noisy spectrum and template spectrum, the information is also store in txt files, e.g.,
+- template_high_pass.txt - template spectrum after passing a high-pass filter
+- obs_high_pass.txt - noisy spectrum after passing a high-pass filter
+
+3. cross correlation function between the noisy spectrum and template spectrum. 
 
 The code also spits out the following information:
 
