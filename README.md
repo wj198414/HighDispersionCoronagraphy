@@ -154,9 +154,10 @@ HR8799e_all,1.50e+04,3.00e-04, 0.280,2.89e+00,6.98e-01,3.36e+00,8.98e-01
 Each coloum is separated by coma and has the following meaning: 
 - 1st column: prefix
 - 2nd column: spectral resolution
-- 3rd column: the fraction of detections of 100 simulations
-- 4th column: median value of detection significance
-- 5th column: std of detection significance
-- 6th column: median value of detection significance in photon noise limited case
-- 7th column: std of detection significance in photon noise limited case
+- 3rd column: planet-star flux ratio
+- 4th column: the fraction of detections of 100 simulations
+- 5th column: velocity per pixel std of detection significance
+- 6-8 column: median value of detection significance in photon noise limited case
+- 7th column: 5%, 32%, and 50% percentile of detection SNRs
+
 
